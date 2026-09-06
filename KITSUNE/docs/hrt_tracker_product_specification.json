@@ -1,0 +1,835 @@
+{
+  "product": {
+    "name": "HRT Tracker",
+    "type": "offline_first_android_health_and_transition_tracking_application",
+    "description": "A personal HRT, transition progress, health record, timeline, and analytics application.",
+    "principles": [
+      "offline_first",
+      "local_data_ownership",
+      "privacy",
+      "accessibility",
+      "long_term_tracking",
+      "customizable_tracking"
+    ],
+    "profiles": [
+      "trans_men",
+      "trans_women"
+    ],
+    "dedicated_transition_inputs": 500
+  },
+  "main_navigation": [
+    {
+      "id": "home",
+      "label": "Home",
+      "description": "Dashboard and daily status."
+    },
+    {
+      "id": "medications",
+      "label": "Medications",
+      "description": "HRT medications, schedules, doses, adherence, and refills."
+    },
+    {
+      "id": "progress",
+      "label": "Progress",
+      "description": "Transition changes, measurements, photos, symptoms, labs, and charts."
+    },
+    {
+      "id": "calendar",
+      "label": "Calendar",
+      "description": "Chronological view of doses, symptoms, appointments, and milestones."
+    },
+    {
+      "id": "settings",
+      "label": "Settings",
+      "description": "Appearance, privacy, reminders, backup, export, custom fields, and application settings."
+    }
+  ],
+  "dashboard": {
+    "sections": [
+      "welcome_header",
+      "days_since_hrt_started",
+      "current_hrt_regimen",
+      "next_scheduled_dose",
+      "todays_medications",
+      "adherence_percentage",
+      "recent_symptoms",
+      "recent_measurements",
+      "latest_lab_results",
+      "upcoming_appointment",
+      "upcoming_reminder",
+      "recent_progress"
+    ],
+    "quick_actions": [
+      "quick_log_dose",
+      "quick_add_symptom",
+      "quick_add_measurement",
+      "quick_add_journal_entry",
+      "open_timeline",
+      "open_reports"
+    ]
+  },
+  "medications": {
+    "supports_multiple_medications": true,
+    "record_fields": [
+      "medication_name",
+      "generic_name",
+      "brand_name",
+      "medication_type",
+      "formulation",
+      "dose",
+      "dose_units",
+      "route",
+      "frequency",
+      "schedule",
+      "application_or_injection_location",
+      "prescription_information",
+      "prescriber",
+      "pharmacy",
+      "start_date",
+      "end_date",
+      "current_status",
+      "quantity",
+      "remaining_quantity",
+      "refill_interval",
+      "prescription_notes"
+    ],
+    "testosterone_fields": [
+      "formulation",
+      "injection_frequency",
+      "application_frequency",
+      "application_location",
+      "oral_frequency",
+      "implant_information",
+      "highest_previous_dose",
+      "lowest_previous_dose",
+      "dose_change_history",
+      "formulation_change_history",
+      "adherence",
+      "missed_dose_frequency",
+      "catch_up_dosing_record",
+      "typical_injection_day",
+      "time_since_last_injection",
+      "peak_trough_status_for_labs"
+    ],
+    "supported_formulations": [
+      "cypionate",
+      "enanthate",
+      "propionate",
+      "topical",
+      "other"
+    ],
+    "dose_history_actions": [
+      "log_dose",
+      "edit_dose",
+      "delete_dose",
+      "undo_deletion",
+      "mark_missed_dose",
+      "mark_late_dose",
+      "record_actual_administration_time",
+      "record_scheduled_time",
+      "add_notes",
+      "view_medication_specific_history",
+      "calculate_adherence",
+      "detect_missed_dose_patterns",
+      "show_dose_timeline",
+      "search_dose_history"
+    ],
+    "refill_tracking": {
+      "enabled": true,
+      "example": {
+        "prescription_quantity": "10 mL",
+        "remaining_quantity": "4.2 mL",
+        "typical_dose": "0.25 mL",
+        "estimated_remaining_doses": 16,
+        "refill_reminder_enabled": true
+      }
+    }
+  },
+  "progress": {
+    "tracking_value_types": [
+      "numeric_measurement",
+      "date",
+      "boolean",
+      "rating",
+      "multiple_choice",
+      "free_text",
+      "trend",
+      "before_after",
+      "photo",
+      "provider_confirmed",
+      "user_estimated"
+    ],
+    "universal_modules": [
+      "transition_timeline",
+      "measurements",
+      "photos",
+      "symptoms",
+      "wellbeing",
+      "laboratory_results",
+      "charts",
+      "custom_fields"
+    ],
+    "profiles": {
+      "trans_men": {
+        "total_inputs": 250,
+        "categories": {
+          "hrt_timeline_and_testosterone_exposure": 50,
+          "reproductive_and_genital": 35,
+          "body_composition": 40,
+          "muscle_and_physiology": 35,
+          "hair": 30,
+          "facial_features": 25,
+          "voice": 10,
+          "surgery_and_fertility": 10
+        },
+        "fields": {
+          "hrt_timeline_and_testosterone_exposure": [
+            "assigned_sex_at_birth",
+            "current_age",
+            "age_when_testosterone_began",
+            "exact_testosterone_start_date",
+            "total_time_on_testosterone",
+            "first_noticeable_change",
+            "voice_change_date",
+            "first_facial_hair",
+            "body_hair_onset",
+            "endogenous_puberty",
+            "puberty_progression",
+            "previous_blockers",
+            "blocker_age",
+            "blocker_duration",
+            "time_between_blockers_and_testosterone",
+            "current_testosterone_dose",
+            "formulation",
+            "route",
+            "injection_frequency",
+            "topical_frequency_and_location",
+            "oral_frequency",
+            "time_at_current_dose",
+            "highest_dose",
+            "lowest_dose",
+            "complete_dose_change_history",
+            "seasonal_adjustment",
+            "pharmacy_or_source_changes",
+            "compounded_or_commercial",
+            "previous_preparations",
+            "adherence",
+            "missed_doses",
+            "catch_up_dosing",
+            "injection_day",
+            "time_since_injection_at_labs",
+            "peak_trough_pattern",
+            "formulation_changes",
+            "sustained_release_implants",
+            "implant_replacement_frequency",
+            "most_recent_hormone_panel",
+            "total_testosterone",
+            "free_testosterone",
+            "estradiol",
+            "progesterone",
+            "testosterone_trend",
+            "estradiol_trend",
+            "lab_timing",
+            "prolactin",
+            "shbg",
+            "thyroid_function",
+            "liver_function_markers"
+          ],
+          "reproductive_and_genital": [
+            "clitoral_development",
+            "baseline_length",
+            "current_length",
+            "baseline_girth",
+            "current_girth",
+            "firmness",
+            "sensitivity",
+            "erectile_capacity",
+            "growth_start",
+            "estimated_growth_rate",
+            "growth_trend",
+            "pigmentation",
+            "retraction_or_exposure",
+            "external_positioning",
+            "vaginal_atrophy",
+            "dryness",
+            "tissue_appearance",
+            "cervical_changes",
+            "cramping",
+            "ovarian_function",
+            "menstrual_changes",
+            "breakthrough_bleeding",
+            "last_period",
+            "fertility_status_or_concerns",
+            "egg_freezing",
+            "future_genetic_parenthood_interest",
+            "reproductive_tissue_procedures",
+            "pelvic_floor_changes",
+            "internal_tissue_changes",
+            "urinary_changes",
+            "urinary_stream",
+            "metoidioplasty_candidacy_tracking",
+            "phalloplasty_interest",
+            "erectile_response_changes",
+            "arousal_timing",
+            "orgasm_changes"
+          ],
+          "body_composition": [
+            "height",
+            "pre_testosterone_weight",
+            "current_weight",
+            "three_month_trend",
+            "twelve_month_trend",
+            "bmi",
+            "body_fat_percentage",
+            "target_body_fat_percentage",
+            "weight_distribution_goals",
+            "hip_circumference",
+            "waist_circumference",
+            "chest_circumference",
+            "bust_circumference",
+            "hip_to_waist_ratio",
+            "shoulder_to_hip_ratio",
+            "body_shape_perception",
+            "visceral_fat",
+            "subcutaneous_fat",
+            "breast_or_chest_tissue_changes",
+            "regional_fat_changes",
+            "face_fat_redistribution",
+            "extremity_changes",
+            "abdominal_changes"
+          ],
+          "muscle_and_physiology": [
+            "muscle_mass",
+            "gain_rate",
+            "first_noticeable_gain",
+            "growth_trend",
+            "upper_body_definition",
+            "lower_body_definition",
+            "shoulders",
+            "arms",
+            "legs",
+            "abdomen",
+            "chest",
+            "back",
+            "grip_strength",
+            "lifting_capacity",
+            "recovery",
+            "exercise_tolerance",
+            "soreness",
+            "pre_testosterone_voice_pitch",
+            "current_pitch",
+            "voice_change_timeline",
+            "depth",
+            "range",
+            "cracking_period",
+            "stability",
+            "voice_training",
+            "laryngeal_prominence",
+            "dysphoria",
+            "speech_pattern",
+            "resonance",
+            "breathiness",
+            "rasp",
+            "vocal_endurance",
+            "strength",
+            "cardiovascular_endurance",
+            "hemoglobin",
+            "hematocrit",
+            "rbc_changes",
+            "metabolism",
+            "cold_tolerance",
+            "heat_tolerance",
+            "sweating",
+            "sweat_odor",
+            "body_temperature_baseline"
+          ],
+          "hair": [
+            "baseline_facial_hair",
+            "facial_hair_density",
+            "facial_hair_color",
+            "facial_hair_texture",
+            "facial_hair_coverage",
+            "facial_hair_growth_rate",
+            "facial_hair_growth_trend",
+            "facial_hair_satisfaction",
+            "sideburns",
+            "upper_lip",
+            "chin",
+            "cheeks",
+            "neck",
+            "previous_hair_removal",
+            "baseline_body_hair_coverage",
+            "current_body_hair_density",
+            "body_hair_color",
+            "body_hair_texture",
+            "arms",
+            "legs",
+            "chest",
+            "abdomen",
+            "back",
+            "face",
+            "neck",
+            "genital_region_hair",
+            "body_hair_growth_rate",
+            "body_hair_growth_trend",
+            "scalp_baseline_density",
+            "scalp_current_density",
+            "hair_loss",
+            "scalp_texture",
+            "oil_production",
+            "male_pattern_baldness",
+            "recession",
+            "thickness",
+            "scalp_color",
+            "graying",
+            "styling_preferences"
+          ],
+          "facial_features": [
+            "jaw_prominence",
+            "jawline_definition",
+            "chin_size",
+            "chin_projection",
+            "cheekbones",
+            "cheek_fat",
+            "forehead",
+            "brow_ridge",
+            "eye_area",
+            "under_eye_area",
+            "lips",
+            "mouth_width",
+            "nose_appearance",
+            "nasal_bridge",
+            "nostrils",
+            "face_width",
+            "face_length",
+            "overall_masculinization",
+            "effect_of_facial_hair",
+            "face_shape",
+            "skin_texture",
+            "skin_thickness",
+            "acne",
+            "oiliness",
+            "pore_size"
+          ],
+          "voice": [
+            "voice_dysphoria",
+            "gendering_on_phone",
+            "gendering_in_person",
+            "voice_training",
+            "voice_confidence",
+            "training_hours",
+            "perceived_voice",
+            "communication_changes",
+            "speech_confidence",
+            "formal_voice_classes"
+          ],
+          "surgery_and_fertility": [
+            "hysterectomy_plans",
+            "oophorectomy_plans",
+            "metoidioplasty_plans",
+            "phalloplasty_plans",
+            "vaginectomy_plans",
+            "surgical_timelines",
+            "fertility_preservation",
+            "egg_freezing"
+          ]
+        }
+      },
+      "trans_women": {
+        "total_inputs": 250,
+        "categories": {
+          "facial_feminization": 45,
+          "hair": 30,
+          "skin": 25,
+          "voice": 20,
+          "body_and_physiology": 35,
+          "breast_development": 35,
+          "secondary_sexual_characteristics": 20,
+          "genital_and_sexual": 20
+        }
+      }
+    }
+  },
+  "laboratories": {
+    "record_fields": [
+      "test_name",
+      "value",
+      "unit",
+      "reference_range",
+      "date",
+      "provider",
+      "facility",
+      "fasting_status",
+      "medication_timing",
+      "peak_trough_or_midpoint",
+      "notes",
+      "attached_report_photo_or_pdf"
+    ],
+    "categories": [
+      "testosterone",
+      "free_testosterone",
+      "estradiol",
+      "progesterone",
+      "prolactin",
+      "shbg",
+      "cbc",
+      "hemoglobin",
+      "hematocrit",
+      "rbc",
+      "liver_markers",
+      "kidney_markers",
+      "lipids",
+      "glucose",
+      "a1c",
+      "thyroid_markers"
+    ],
+    "features": [
+      "multi_date_trends",
+      "charts",
+      "attachments"
+    ]
+  },
+  "wellbeing": {
+    "fields": [
+      "mood",
+      "energy",
+      "sleep",
+      "stress",
+      "symptoms",
+      "pain",
+      "motivation",
+      "dysphoria",
+      "confidence",
+      "overall_wellbeing",
+      "custom_check_ins",
+      "notes_or_journal_entries"
+    ]
+  },
+  "photos": {
+    "record_fields": [
+      "photo",
+      "date",
+      "category",
+      "optional_caption",
+      "notes",
+      "baseline_designation",
+      "timeline_position"
+    ],
+    "categories": [
+      "face",
+      "hair",
+      "body",
+      "chest_or_breasts",
+      "facial_hair",
+      "custom"
+    ]
+  },
+  "calendar": {
+    "merged_event_types": [
+      "medication_doses",
+      "missed_doses",
+      "symptoms",
+      "measurements",
+      "labs",
+      "appointments",
+      "surgery_milestones",
+      "photos",
+      "progress_milestones",
+      "custom_events"
+    ],
+    "date_view": "Selecting a date displays the complete record for that day."
+  },
+  "timeline": {
+    "automatic": true,
+    "event_order_examples": [
+      "hrt_started",
+      "dose_changes",
+      "first_changes",
+      "lab_tests",
+      "measurements",
+      "photos",
+      "symptoms",
+      "appointments",
+      "milestones"
+    ]
+  },
+  "charts": [
+    "testosterone_over_time",
+    "estradiol_over_time",
+    "weight",
+    "waist",
+    "hip",
+    "chest",
+    "body_fat_percentage",
+    "muscle_mass",
+    "hair_growth_progression",
+    "voice_pitch",
+    "symptom_severity",
+    "mood",
+    "energy",
+    "sleep",
+    "adherence",
+    "breast_measurements",
+    "body_proportions",
+    "custom_measurements",
+    "metric_comparison"
+  ],
+  "reminders": {
+    "categories": [
+      "medication",
+      "dose",
+      "refill",
+      "lab_appointment",
+      "doctor_appointment",
+      "surgery_consultation",
+      "measurement",
+      "photo",
+      "custom"
+    ],
+    "recurring_schedules": true
+  },
+  "search": {
+    "global": true,
+    "searchable_entities": [
+      "medications",
+      "doses",
+      "labs",
+      "measurements",
+      "symptoms",
+      "appointments",
+      "notes",
+      "photos",
+      "timeline_events",
+      "custom_fields"
+    ]
+  },
+  "custom_fields": {
+    "definition_fields": [
+      "name",
+      "category",
+      "input_type",
+      "unit",
+      "minimum",
+      "maximum",
+      "frequency",
+      "reminder",
+      "chart_visibility",
+      "timeline_visibility"
+    ],
+    "input_types": [
+      "number",
+      "text",
+      "date",
+      "boolean",
+      "rating",
+      "dropdown",
+      "measurement",
+      "percentage"
+    ]
+  },
+  "reports": {
+    "date_range_selectable": true,
+    "include_options": [
+      "medication_history",
+      "dose_history",
+      "adherence",
+      "labs",
+      "measurements",
+      "symptoms",
+      "appointments",
+      "progress_charts",
+      "timeline",
+      "notes",
+      "custom_fields"
+    ],
+    "formats": [
+      "pdf",
+      "csv",
+      "structured_backup"
+    ]
+  },
+  "import_export": {
+    "export_formats": [
+      "csv",
+      "pdf",
+      "structured_backup_file"
+    ],
+    "import_formats": [
+      "csv",
+      "structured_backup_file"
+    ],
+    "user_data_portability": true
+  },
+  "privacy_security": {
+    "offline_first_storage": true,
+    "account_required": false,
+    "local_database": true,
+    "app_lock": {
+      "enabled": true,
+      "methods": [
+        "pin",
+        "biometric_where_supported"
+      ]
+    },
+    "data_controls": [
+      "backup",
+      "restore",
+      "export_data",
+      "delete_all_data",
+      "confirmation_before_destructive_operations"
+    ]
+  },
+  "appearance": {
+    "modes": [
+      "light",
+      "dark",
+      "system"
+    ],
+    "applies_to": [
+      "dashboard",
+      "medication_screens",
+      "forms",
+      "dialogs",
+      "charts",
+      "calendar",
+      "report_preview",
+      "settings",
+      "navigation",
+      "launch_screen",
+      "system_facing_ui_where_supported"
+    ],
+    "design_language": [
+      "clean",
+      "calm",
+      "modern",
+      "private",
+      "soft_neutral_backgrounds",
+      "clear_typography",
+      "subtle_teal_or_purple_accents",
+      "restrained_warning_colors",
+      "large_touch_targets",
+      "clear_data_cards",
+      "simple_charts",
+      "minimal_visual_clutter"
+    ]
+  },
+  "accessibility": [
+    "scalable_text",
+    "large_touch_targets",
+    "screen_reader_support",
+    "clear_labels",
+    "high_contrast",
+    "no_color_only_indicators",
+    "accessible_charts",
+    "accessible_forms",
+    "dark_mode_contrast",
+    "proper_empty_states"
+  ],
+  "empty_states": [
+    {
+      "section": "medications",
+      "message": "Add your first medication to begin tracking your HRT."
+    },
+    {
+      "section": "labs",
+      "message": "Record your first laboratory result to begin your trends."
+    },
+    {
+      "section": "photos",
+      "message": "Add a photo to start your private progress timeline."
+    }
+  ],
+  "error_handling": {
+    "deletion_confirmation_required": true,
+    "important_records_require_confirmation": true
+  },
+  "architecture": {
+    "storage": "local_database",
+    "network_dependency_for_core_features": false,
+    "core_offline_features": [
+      "log_doses",
+      "enter_measurements",
+      "add_symptoms",
+      "add_labs",
+      "view_history",
+      "view_charts",
+      "manage_reminders",
+      "view_calendar",
+      "browse_photos",
+      "create_reports"
+    ]
+  },
+  "feature_tree": {
+    "HRT_TRACKER": {
+      "HOME_DASHBOARD": {},
+      "MEDICATIONS": {
+        "MEDICATIONS": {},
+        "SCHEDULES": {},
+        "DOSE_LOGGING": {},
+        "DOSE_HISTORY": {},
+        "REFILLS": {}
+      },
+      "PROGRESS": {
+        "TRANSITION_TIMELINE": {},
+        "MEASUREMENTS": {},
+        "PHOTOS": {},
+        "SYMPTOMS": {},
+        "WELLBEING": {},
+        "LABORATORY_RESULTS": {},
+        "CHARTS": {},
+        "TRANS_MEN": {
+          "HRT_TESTOSTERONE": 50,
+          "REPRODUCTIVE_GENITAL": 35,
+          "BODY_COMPOSITION": 40,
+          "MUSCLE_PHYSIOLOGY": 35,
+          "HAIR": 30,
+          "FACIAL_FEATURES": 25,
+          "VOICE": 10,
+          "SURGERY_FERTILITY": 10
+        },
+        "TRANS_WOMEN": {
+          "FACIAL_FEMINIZATION": 45,
+          "HAIR": 30,
+          "SKIN": 25,
+          "VOICE": 20,
+          "BODY_PHYSIOLOGY": 35,
+          "BREAST_DEVELOPMENT": 35,
+          "SECONDARY_CHARACTERISTICS": 20,
+          "GENITAL_SEXUAL": 20
+        }
+      },
+      "CALENDAR": {
+        "DOSES": {},
+        "SYMPTOMS": {},
+        "LABS": {},
+        "APPOINTMENTS": {},
+        "MILESTONES": {}
+      },
+      "REMINDERS": {
+        "MEDICATIONS": {},
+        "REFILLS": {},
+        "LABS": {},
+        "APPOINTMENTS": {},
+        "CUSTOM": {}
+      },
+      "REPORTS": {
+        "PDF": {},
+        "CSV": {},
+        "CUSTOM_DATE_RANGES": {}
+      },
+      "SETTINGS": {
+        "APPEARANCE": [
+          "light",
+          "dark",
+          "system"
+        ],
+        "PRIVACY_SECURITY": {},
+        "BACKUP_RESTORE": {},
+        "IMPORT_EXPORT": {},
+        "CUSTOM_FIELDS": {},
+        "ACCESSIBILITY": {},
+        "ABOUT": {}
+      }
+    }
+  }
+}
